@@ -36,8 +36,8 @@ To build practical, hands-on offensive security skills (recon → exploitation �
 | 2 | Installing Kali Linux (VirtualBox setup) | [day02.md](day02.md) | ✅ Done |
 | 3 | Ethical Hacking Methodology & Cyber Kill Chain | [day03.md](day03.md) | ✅ Done |
 | 4 | Intro to Reconnaissance (passive vs active) | [day04.md](day04.md) | ✅ Done |
-| 5 | Advanced Recon Tools (OSINT, theHarvester, Shodan) | day05.md | ⬜ Upcoming |
-| 6 | Scanning Networks (Nmap deep-dive) | day06.md | ⬜ Upcoming |
+| 5 | Google Dorking (Google Hacking) | [day05.md](day05.md) | ✅ Done |
+| 6 | WHOIS & DNS Recon | [day06.md](day06.md) | ✅ Done |
 | 7 | Enumeration (SMB, SNMP, NetBIOS) | day07.md | ⬜ Upcoming |
 
 ### Week 2 — Vulnerabilities & Exploitation Basics
@@ -93,6 +93,12 @@ To build practical, hands-on offensive security skills (recon → exploitation �
 | Zero-day | Vulnerability unknown to the vendor, no patch exists |
 | Rootkit | Software hiding the presence of malware/unauthorized access |
 | C2 (Command & Control) | Attacker's remote channel to control compromised systems |
+| Banner Grabbing | Identifying service/software version running on an open port |
+| IDS/IPS | Intrusion Detection/Prevention System |
+| Google Dorking / GHDB | Advanced Google search operators / Exploit-DB's dork repository |
+| WHOIS | Protocol/database for domain registration ownership lookup |
+| DNS Record Types (A/AAAA/CNAME/NS/SOA/TXT/MX) | See Day 06 for full breakdown |
+| Zone Transfer (AXFR) | DNS mechanism for replicating zone data — risky if misconfigured |
 
 *(Each day's file adds new terms here as they come up.)*
 
