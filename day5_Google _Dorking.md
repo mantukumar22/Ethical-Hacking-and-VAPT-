@@ -28,11 +28,15 @@ site:microsoft.com
 ```
 → Confirms which subdomains/pages Google has indexed for a domain (visualstudio.microsoft.com, clarity.microsoft.com, azure.microsoft.com, forms.microsoft.com, etc.) — useful for mapping an organization's attack surface / subdomains during recon.
 
+![site: search results for microsoft.com](images/day05-site-search.png)
+
 **2. Narrowing with a keyword**
 ```
 site:microsoft.com "Xbox"
 ```
 → Google even auto-suggests related filter chips (Login, Games, Series X, Controller, Support...) — shows how a target's indexed content can be explored topic by topic.
+
+![site: + keyword search showing filter chips](images/day05-site-xbox.png)
 
 **3. Hunting for exposed file types**
 ```
@@ -40,11 +44,15 @@ site:microsoft.com filetype:pdf
 ```
 → Returns publicly indexed PDFs (Terms of Use, FAQs, internal-looking docs) hosted on the domain. This is the classic technique for finding leaked whitepapers, internal presentations, or configs that were never meant to be crawled.
 
+![site: + filetype:pdf results](images/day05-filetype-pdf.png)
+
 **4. Combining keyword + filetype (the "juicy" dork)**
 ```
 site:microsoft.com "Passwords" filetype:xlsx
 ```
 → This is the dangerous combo — searching for a sensitive keyword **and** restricting to a spreadsheet filetype. In the demo, results were mostly false positives (community forum spreadsheets mentioning the word "passwords" in policy discussions), but this exact pattern is how real credential leaks get found in the wild. It illustrates *why* organizations must be careful about what gets indexed.
+
+![site: + keyword + filetype:xlsx results](images/day05-passwords-xlsx.png)
 
 **5. Exploit-DB's Google Hacking Database (GHDB)**
 - Visited `https://www.exploit-db.com/google-hacking-database`
@@ -54,6 +62,8 @@ site:microsoft.com "Passwords" filetype:xlsx
   - `site:.edu filetype:xls "root" database` → *Files Containing Juicy Info*
   - `inurl:"cgi-bin/koha"` → *Vulnerable Servers*
 - Each dork is tagged by **category** (Files Containing Passwords, Vulnerable Servers, Various Online Devices, Files Containing Juicy Info, Files Containing Usernames) and credited to the researcher who submitted it.
+
+![Exploit-DB Google Hacking Database listing](images/day05-ghdb.png)
 
 ## ➕ Extra context (added beyond the slides)
 - **Full list of useful operators not shown in slides:**
