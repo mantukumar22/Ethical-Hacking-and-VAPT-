@@ -25,6 +25,8 @@ To build practical, hands-on offensive security skills (recon → exploitation �
 4. **Practice** hands-on in Kali/TryHackMe before moving to the next day.
 5. **Review** the glossary + quiz questions at the end of the week.
 
+🖼️ **All practice screenshots live in [`images/`](images/)** and are indexed in **[IMAGES.md](IMAGES.md)** — check there if a picture isn't rendering in a day's notes.
+
 ---
 
 ## 📅 30-Day Syllabus & Progress Tracker
@@ -38,16 +40,16 @@ To build practical, hands-on offensive security skills (recon → exploitation �
 | 4 | Intro to Reconnaissance (passive vs active) | [day04.md](day04.md) | ✅ Done |
 | 5 | Google Dorking (Google Hacking) | [day05.md](day05.md) | ✅ Done |
 | 6 | WHOIS & DNS Recon | [day06.md](day06.md) | ✅ Done |
-| 7 | Enumeration (SMB, SNMP, NetBIOS) | day07.md | ⬜ Upcoming |
+| 7 | Social Media Recon | [day07.md](day07.md) | ✅ Done |
 
-### Week 2 — Vulnerabilities & Exploitation Basics
+### Week 2 — Fingerprinting, Recon Depth & Scanning
 | Day | Topic | Notes File | Status |
 |---|---|---|---|
-| 8 | Vulnerability Analysis & CVEs | day08.md | ⬜ |
-| 9 | System Hacking Fundamentals | day09.md | ⬜ |
-| 10 | Malware Threats (viruses, worms, trojans, ransomware) | day10.md | ⬜ |
-| 11 | Sniffing (Wireshark) | day11.md | ⬜ |
-| 12 | Web App Basics (HTTP, requests, Burp Suite intro) | day12.md | ⬜ |
+| 8 | Identifying Website Technologies (Wappalyzer, BuiltWith) | [day08.md](day08.md) | ✅ Done |
+| 9 | Subdomain Enumeration (Subfinder, c99.nl) | [day09.md](day09.md) | ✅ Done |
+| 10 | Identifying Firewalls / WAF (WAFW00F) | [day10.md](day10.md) | ✅ Done |
+| 11 | Scanning with Nmap (ports, protocols, scan types) | [day11.md](day11.md) | ✅ Done |
+| 12 | Directory Bruteforcing (Gobuster, Feroxbuster) + TryHackMe Vulnversity | [day12.md](day12.md) | ✅ Done |
 | 13 | Social Engineering Fundamentals | day13.md | ⬜ |
 | 14 | Metasploit Basics | day14.md | ⬜ |
 
@@ -79,7 +81,7 @@ To build practical, hands-on offensive security skills (recon → exploitation �
 | 29 | Full Review + Glossary Consolidation | day29.md | ⬜ |
 | 30 | Capstone Lab (apply full methodology end-to-end on a TryHackMe box) | day30.md | ⬜ |
 
-*(Exact day numbers are estimated/re-sequenced from the course's "What We Will Cover" list — items 1–15 in the video weren't fully numbered in the syllabus screenshot, so foundational topics are slotted into Week 1–2 in logical course order. Update this table as real video timestamps confirm each day.)*
+*(Days 1–12 are confirmed from the actual video content and timestamps. Days 13+ topic labels are still estimated from the course's "What We Will Cover" list and will be corrected as each day is actually completed.)*
 
 ---
 
@@ -99,6 +101,19 @@ To build practical, hands-on offensive security skills (recon → exploitation �
 | WHOIS | Protocol/database for domain registration ownership lookup |
 | DNS Record Types (A/AAAA/CNAME/NS/SOA/TXT/MX) | See Day 06 for full breakdown |
 | Zone Transfer (AXFR) | DNS mechanism for replicating zone data — risky if misconfigured |
+| Username Enumeration | Checking if the same username exists across many platforms (e.g. Sherlock) |
+| Knowledge Panel | Google's structured info box summarizing an entity with links to official profiles |
+| Technology Fingerprinting | Identifying a site's tech stack via passive observation (Wappalyzer, BuiltWith) |
+| PaaS | Platform-as-a-Service (e.g. Azure, AWS Elastic Beanstalk) |
+| Subdomain / PPE | A prefixed section of a domain; PPE = Pre-Production Environment |
+| Certificate Transparency Log | Public log of issued SSL/TLS certs — often leaks subdomain names |
+| WAF (Web Application Firewall) | A firewall filtering HTTP traffic to protect web apps specifically |
+| WAFW00F | Open-source WAF fingerprinting tool |
+| Port / Protocol | Logical network endpoint / rule set governing data transmission |
+| NSE (Nmap Scripting Engine) | Nmap's built-in scripting framework for automated recon/vuln checks |
+| Directory Bruteforcing | Systematically requesting wordlist-based paths to discover hidden files/folders |
+| Soft 404 | A page returning HTTP 200 but displaying "not found" content |
+| Rate Limiting (429) | A server defense throttling repeated requests from the same source |
 
 *(Each day's file adds new terms here as they come up.)*
 
